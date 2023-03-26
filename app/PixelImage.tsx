@@ -7,7 +7,6 @@ export class PixelImage extends Component<
   render() {
     return (
       <img
-        className="PixelImage"
         style={{
           imageRendering: "pixelated",
           ...this.props.style,
