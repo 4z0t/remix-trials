@@ -8,22 +8,18 @@ export { PixelImage };
 // ];
 
 class PixelImage extends Component<
-  React.CSSProperties | React.ImgHTMLAttributes<HTMLImageElement>
+  React.ImgHTMLAttributes<HTMLImageElement>,
+  React.CSSProperties
 > {
-  src: string;
-  constructor(props: any) {
-    super(props);
-    this.src = props.src;
-  }
   render() {
     return (
       <img
         className="PixelImage"
         style={{
           imageRendering: "pixelated",
-          ...this.props,
+          ...this.props.style
         }}
-        src={this.src}
+        src={this.props.src}
       />
     );
   }

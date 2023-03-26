@@ -12,13 +12,14 @@ export default function Index() {
       <h1>Welcome to Remix</h1>
       <PixelImage
         src="/media/gifs/logo4z0t.gif"
-        width="100%"
-        margin="-30% 0%"
+        style={{
+          width: "100%",
+          margin: "-30% 0%",
+        }}
       ></PixelImage>
       <ul>
         <li>
           <a
-          
             target="_blank"
             href="https://remix.run/tutorials/blog"
             rel="noreferrer"
