@@ -1,10 +1,24 @@
+import { PixelImage } from "../PixelImage";
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+    <div
+      style={{
+        fontFamily: "system-ui, sans-serif",
+        lineHeight: "1.4",
+        backgroundColor: "#000000",
+      }}
+    >
       <h1>Welcome to Remix</h1>
+      <PixelImage
+        src="/media/gifs/logo4z0t.gif"
+        width="100%"
+        margin="-30% 0%"
+      ></PixelImage>
       <ul>
         <li>
           <a
+          
             target="_blank"
             href="https://remix.run/tutorials/blog"
             rel="noreferrer"
