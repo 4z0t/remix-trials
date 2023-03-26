@@ -14,7 +14,7 @@ export default function Index() {
         src="/media/gifs/logo4z0t.gif"
         style={{
           width: "100%",
-          margin: "-30% 0%",
+          margin: "-30% 0% -30% -3.125%",
         }}
       ></PixelImage>
       <ul>
