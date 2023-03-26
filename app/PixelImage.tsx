@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-export { PixelImage };
-class PixelImage extends Component<
+
+export class PixelImage extends Component<
   React.ImgHTMLAttributes<HTMLImageElement>,
   React.CSSProperties
 > {
@@ -10,7 +10,7 @@ class PixelImage extends Component<
         className="PixelImage"
         style={{
           imageRendering: "pixelated",
-          ...this.props.style
+          ...this.props.style,
         }}
         src={this.props.src}
       />
