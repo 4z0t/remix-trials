@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { PixelImage } from "../PixelImage";
 
 export default function Index() {
@@ -8,16 +9,18 @@ export default function Index() {
         lineHeight: "1.4",
         backgroundColor: "#000000",
       }}
-    >
+      >
       <h1>Welcome to Remix</h1>
       <PixelImage
         src="/media/gifs/logo4z0t.gif"
         style={{
           width: "100%",
           margin: "-30% 0% -30% -3.125%",
+          zIndex: -1,
         }}
-      ></PixelImage>
+        ></PixelImage>
       <ul>
+        <Link to="/oxygen">Oxygen</Link>
         <li>
           <a
             target="_blank"
