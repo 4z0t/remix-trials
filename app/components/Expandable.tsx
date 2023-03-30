@@ -1,45 +1,33 @@
-import React, { useState, Component } from "react";
-
+import React, { useState, useEffect, PropsWithChildren } from "react";
 
 
 export interface ExpandableProperties extends React.CSSProperties {
-    children: [React.ReactElement<React.CSSProperties>, React.ReactElement<React.CSSProperties>]
+    children: React.ReactElement<React.CSSProperties>[]
 }
 
 type ExpandableElement = React.ReactElement<ExpandableProperties>;
 
+
+
 export function Expandable(props: ExpandableProperties): ExpandableElement {
 
+    let [hidden, setHidden] = useState<boolean>(true);
 
-    let [hidden, setHidden] = useState<boolean>();
-
-
-    const handleMouseOver = (e: React.MouseEvent<HTMLDivElement>) => {
-        const control: ExpandableElement = e.currentTarget;
-        const children = control.props.children;
-        const content = children[1];
-        content.props.maxHeight = null;
+    const handleMouseOver = () => {
+        setHidden(false);
         console.log("over");
     };
-    const handleMouseOut = (e: React.MouseEvent<HTMLDivElement>) => {
-        const control: ExpandableElement = e.currentTarget;
-        const children = control.props.children;
-        const content = children[1];
-        content.props.maxHeight = content.props.scrollHeight + "px";
+    const handleMouseOut = () => {
+        setHidden(true);
         console.log("out");
-        
     };
 
     return (
         <div className="expandable" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-            {/* <div className="expandable-title">
-
+            {props.children[0]}
+            <div style={{ maxHeight: hidden ? "0" : "max-content", transition: "max-height 0.3s ease-out", overflow: "hidden" }}>
+                {props.children.slice(1)}
             </div>
-            <div className="expandable-content">
-                
-            </div> */}
-            {props.children}
-
         </div>
     );
 }
