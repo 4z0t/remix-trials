@@ -4,6 +4,7 @@ import { Expandable } from "~/components/Expandable";
 
 import indexStyles from "~/styles/index.css";
 import expandableStyles from "~/styles/Expandable.css";
+import { style as titleStyles, Title } from "~/components/Title";
 
 export default function Index() {
   return (
@@ -13,7 +14,6 @@ export default function Index() {
         style={{
           width: "100%",
           margin: "-20% 0% -40% -3.125%",
-          zIndex: -1,
         }}
       ></PixelImage>
       <div className="main-contents">
@@ -32,7 +32,7 @@ export default function Index() {
         </ul>
 
         <Expandable>
-          <h3>AAAAAAAa</h3>
+          <Title>AAAAAAAa</Title>
           <div className="expandable-content">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
@@ -41,7 +41,7 @@ export default function Index() {
         </Expandable>
 
         <Expandable>
-          <h3>bbbbbbbb</h3>
+          <Title>bbbbbbbb</Title>
           <div className="expandable-content">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
@@ -62,5 +62,6 @@ export function links() {
   return [
     { rel: "stylesheet", href: indexStyles },
     { rel: "stylesheet", href: expandableStyles },
+    { rel: "stylesheet", href: titleStyles },
   ];
 }
