@@ -16,9 +16,9 @@ function SumHeights(children: HTMLCollection): number {
 }
 
 export function Expandable(props: ExpandableProperties): ExpandableElement {
-  let ref = useRef<HTMLDivElement>(null);
-  let [height, setHeight] = useState<string>("0");
-  let [hidden, setHidden] = useState<boolean>(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState<string>("0");
+  const [hidden, setHidden] = useState<boolean>(false);
 
   const handleOnClick = () => {
       if (!ref.current) return;

@@ -1,20 +1,16 @@
-.expandable
-{
+.expandable {
     margin: 10px;
-    pointer-events:visible;
+    pointer-events: visible;
     z-index: 10;
 }
 
-.expandable-title
-{
+.expandable-title {}
 
-}
-
-.expandable-content
-{
+.expandable-content {
     max-height: inherit;
     color: aliceblue;
     transition: max-height 0.2s ease-out;
     overflow: hidden;
- 
 }
+
+.expandable-content:hover {}
