@@ -18,9 +18,7 @@ export default function Index() {
       ></PixelImage>
       <div className="main-contents">
         <h1 className="title">Welcome to my blog!</h1>
-        <p>
-          Here is my project list
-        </p>
+        <p>Here is my project list</p>
         <h2>FAF</h2>
         <ul>
           <li>
@@ -35,7 +33,10 @@ export default function Index() {
           <Title>AAAAAAAa</Title>
           <div className="expandable-content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
+              nam architecto quo molestias ipsa dolores commodi error expedita
+              officiis provident cupiditate dicta, molestiae dolor unde placeat
+              a ex exercitationem.
             </p>
           </div>
         </Expandable>
@@ -44,19 +45,27 @@ export default function Index() {
           <Title>bbbbbbbb</Title>
           <div className="expandable-content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
+              nam architecto quo molestias ipsa dolores commodi error expedita
+              officiis provident cupiditate dicta, molestiae dolor unde placeat
+              a ex exercitationem. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Ab quas nam architecto quo molestias ipsa
+              dolores commodi error expedita officiis provident cupiditate
+              dicta, molestiae dolor unde placeat a ex exercitationem. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam
+              architecto quo molestias ipsa dolores commodi error expedita
+              officiis provident cupiditate dicta, molestiae dolor unde placeat
+              a ex exercitationem. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Ab quas nam architecto quo molestias ipsa
+              dolores commodi error expedita officiis provident cupiditate
+              dicta, molestiae dolor unde placeat a ex exercitationem.
             </p>
           </div>
         </Expandable>
-
       </div>
     </div>
   );
 }
-
 
 export function links() {
   return [
