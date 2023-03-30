@@ -1,6 +1,9 @@
 import { Link } from "@remix-run/react";
 import { PixelImage } from "../PixelImage";
-import styles from "~/styles/index.css";
+import { Expandable } from "~/components/Expandable";
+
+import indexStyles from "~/styles/index.css";
+import expandableStyles from "~/styles/Expandable.css";
 
 export default function Index() {
   return (
@@ -27,6 +30,15 @@ export default function Index() {
             <Link to="/uimods">UI mods</Link>
           </li>
         </ul>
+
+        <Expandable>
+          <h3>AAAAAAAa</h3>
+          <div className="expandable-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
+            </p>
+          </div>
+        </Expandable>
       </div>
     </div>
   );
@@ -34,5 +46,8 @@ export default function Index() {
 
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    { rel: "stylesheet", href: indexStyles },
+    { rel: "stylesheet", href: expandableStyles },
+  ];
 }
