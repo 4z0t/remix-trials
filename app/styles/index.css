@@ -17,3 +17,14 @@ main {
     margin: 10%;
 }
 
+.expandable-container {
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+@media only screen and (max-width: 960px) {
+    .expandable-container {
+        grid-template-columns: 1fr;
+    }
+}
