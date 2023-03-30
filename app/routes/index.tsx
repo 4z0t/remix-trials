@@ -39,6 +39,19 @@ export default function Index() {
             </p>
           </div>
         </Expandable>
+
+        <Expandable>
+          <h3>bbbbbbbb</h3>
+          <div className="expandable-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam architecto quo molestias ipsa dolores commodi error expedita officiis provident cupiditate dicta, molestiae dolor unde placeat a ex exercitationem.
+            </p>
+          </div>
+        </Expandable>
+
       </div>
     </div>
   );

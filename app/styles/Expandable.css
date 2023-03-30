@@ -12,7 +12,6 @@
 {
     max-height: inherit;
     color: aliceblue;
-    padding: 0 18px;
     transition: max-height 0.2s ease-out;
     overflow: hidden;
 }
