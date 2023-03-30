@@ -4,7 +4,9 @@ import style from "~/styles/Title.css";
 export function Title(props: React.PropsWithChildren<React.CSSProperties>) {
   return (
     <div className="title-box">
-      <p className="title-text">{props.children}</p>
+      <p className="title-text" style={props}>
+        {props.children}
+      </p>
     </div>
   );
 }
