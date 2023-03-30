@@ -41,7 +41,7 @@ export default function Index() {
             </div>
           </Expandable>
 
-          <Expandable>
+          <Expandable expandTime="1s">
             <Title>bbbbbbbb</Title>
             <div className="expandable-content">
               <p>

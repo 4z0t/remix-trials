@@ -2,6 +2,7 @@ import React, { useState, useEffect, PropsWithChildren, useRef } from "react";
 
 interface ExpandableProperties extends React.CSSProperties {
   children: React.ReactElement<React.CSSProperties>[];
+  expandTime?: string //time needed to expand
 }
 
 type ExpandableElement = React.ReactElement<ExpandableProperties>;
@@ -42,7 +43,7 @@ export function Expandable(props: ExpandableProperties): ExpandableElement {
         ref={ref}
         style={{
           maxHeight: height,
-          transition: "max-height 0.5s ease-out",
+          transition: `max-height ${props.expandTime ?? "0.5s"} ease-out`,
           overflow: "hidden",
         }}
       >
