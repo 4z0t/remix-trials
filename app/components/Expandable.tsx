@@ -16,7 +16,13 @@ function SumHeights(children: HTMLCollection): number {
 }
 
 
-
+/**
+ * Wraps other components into expandable div that expands on click.
+ * First child is considered as title and others as contents of group.
+ * 
+ * @param props @see ExpandableProperties
+ * @returns 
+ */
 export function Expandable(props: ExpandableProperties): ExpandableElement {
   const ref = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<string>("0");
