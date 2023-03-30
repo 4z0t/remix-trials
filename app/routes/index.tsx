@@ -9,7 +9,7 @@ export default function Index() {
         src="/media/gifs/logo4z0t.gif"
         style={{
           width: "100%",
-          margin: "-30% 0% -30% -3.125%",
+          margin: "-20% 0% -40% -3.125%",
           zIndex: -1,
         }}
       ></PixelImage>
