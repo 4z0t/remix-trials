@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { PixelImage } from "../PixelImage";
+import { PixelImage } from "~/components/PixelImage";
 import { Expandable } from "~/components/Expandable";
 
 import indexStyles from "~/styles/index.css";
