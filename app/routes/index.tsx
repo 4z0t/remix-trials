@@ -23,6 +23,9 @@ export default function Index() {
           <li>
             <Link to="/oxygen">Oxygen</Link>
           </li>
+          <li>
+            <Link to="/uimods">UI mods</Link>
+          </li>
         </ul>
       </div>
     </div>
