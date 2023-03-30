@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+main {
+    color: white;
+}
+
+.title {
+    color: aquamarine;
+    text-align: center;
+}
+
+.main-contents {
+    margin: 10%;
+}

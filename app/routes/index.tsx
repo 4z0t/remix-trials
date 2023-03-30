@@ -1,16 +1,10 @@
 import { Link } from "@remix-run/react";
 import { PixelImage } from "../PixelImage";
+import styles from "~/styles/index.css";
 
 export default function Index() {
   return (
-    <div
-      style={{
-        fontFamily: "system-ui, sans-serif",
-        lineHeight: "1.4",
-        backgroundColor: "#000000",
-      }}
-      >
-      <h1>Welcome to Remix</h1>
+    <div>
       <PixelImage
         src="/media/gifs/logo4z0t.gif"
         style={{
@@ -18,33 +12,24 @@ export default function Index() {
           margin: "-30% 0% -30% -3.125%",
           zIndex: -1,
         }}
-        ></PixelImage>
-      <ul>
-        <Link to="/oxygen">Oxygen</Link>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+      ></PixelImage>
+      <div className="main-contents">
+        <h1 className="title">Welcome to my blog!</h1>
+        <p>
+          Here is my project list
+        </p>
+        <h2>FAF</h2>
+        <ul>
+          <li>
+            <Link to="/oxygen">Oxygen</Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
+}
+
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
 }
