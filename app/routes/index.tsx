@@ -30,8 +30,21 @@ export default function Index() {
         </ul>
         <div className="expandable-container">
           <Expandable>
-            <Title>AAAAAAAa</Title>
+            <Title>Better Chat</Title>
             <div className="expandable-content">
+              <img src="/media/betterchat.png" width="100%"></img>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
+                nam architecto quo molestias ipsa dolores commodi error expedita
+                officiis provident cupiditate dicta, molestiae dolor unde
+                placeat a ex exercitationem.
+              </p>
+            </div>
+          </Expandable>
+          <Expandable>
+            <Title>HotBuild Overhaul</Title>
+            <div className="expandable-content">
+              <img src="/media/HotBuildOverhaul.png" width="100%"></img>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
                 nam architecto quo molestias ipsa dolores commodi error expedita
@@ -42,8 +55,10 @@ export default function Index() {
           </Expandable>
 
           <Expandable expandTime="1s">
-            <Title>bbbbbbbb</Title>
+            <Title>Scoreboard</Title>
             <div className="expandable-content">
+              <img src="/media/scoreboard.png" width="100%"></img>
+
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
                 nam architecto quo molestias ipsa dolores commodi error expedita
