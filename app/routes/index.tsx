@@ -4,7 +4,7 @@ import { Expandable } from "~/components/Expandable";
 
 import indexStyles from "~/styles/index.css";
 import expandableStyles from "~/styles/Expandable.css";
-import { style as titleStyles, Title } from "~/components/Title";
+import { links as titleStyles, Title } from "~/components/Title";
 
 export default function Index() {
   return (
@@ -105,6 +105,6 @@ export function links() {
   return [
     { rel: "stylesheet", href: indexStyles },
     { rel: "stylesheet", href: expandableStyles },
-    { rel: "stylesheet", href: titleStyles },
+    ...titleStyles(),
   ];
 }
