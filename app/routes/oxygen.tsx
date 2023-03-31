@@ -253,48 +253,57 @@ end)
           </Expandable>
 
           <Expandable expandTime="1s">
-            <Title>Scoreboard</Title>
+            <Title>Cinematics</Title>
             <div className="expandable-content">
-              <img src="/media/scoreboard.png" width="100%"></img>
+              <LuaCodeBlock>
+                {`
+local OC = Oxygen.Cinematics
+...
+-- During NIS mode players cant do any input and black bars appear on top and bottom.
+-- We can also pass in areas where units will become invulnerable during cutscene.
+OC.NISMode(function()
 
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
-                nam architecto quo molestias ipsa dolores commodi error expedita
-                officiis provident cupiditate dicta, molestiae dolor unde
-                placeat a ex exercitationem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Ab quas nam architecto quo
-                molestias ipsa dolores commodi error expedita officiis provident
-                cupiditate dicta, molestiae dolor unde placeat a ex
-                exercitationem. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Ab quas nam architecto quo molestias ipsa
-                dolores commodi error expedita officiis provident cupiditate
-                dicta, molestiae dolor unde placeat a ex exercitationem. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam
-                architecto quo molestias ipsa dolores commodi error expedita
-                officiis provident cupiditate dicta, molestiae dolor unde
-                placeat a ex exercitationem.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
-                nam architecto quo molestias ipsa dolores commodi error expedita
-                officiis provident cupiditate dicta, molestiae dolor unde
-                placeat a ex exercitationem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Ab quas nam architecto quo
-                molestias ipsa dolores commodi error expedita officiis provident
-                cupiditate dicta, molestiae dolor unde placeat a ex
-                exercitationem. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Ab quas nam architecto quo molestias ipsa
-                dolores commodi error expedita officiis provident cupiditate
-                dicta, molestiae dolor unde placeat a ex exercitationem. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Ab quas nam
-                architecto quo molestias ipsa dolores commodi error expedita
-                officiis provident cupiditate dicta, molestiae dolor unde
-                placeat a ex exercitationem.
-              </p>
+    -- Position camera with marker defined on map
+    OC.MoveTo("Cam1", 0)
+
+    -- Create dialog where nice man tells you about objective (there are lots of examples in other missions,
+    -- most important here that we can create our own provided with mission, but it isnt easy process since game is really old)
+    ScenarioFramework.Dialogue( {{
+            text = '[HQ]: <something describing mission>',
+            vid = 'video.sfd',
+            bank = 'wolf',
+            cue = 'corre',
+            faction = 'Cybran'
+        }}, nil, true)
+    
+    -- waiting a bit
+    WaitSeconds(2)
+
+    -- we can display some text, but as I tried to make it bigger, it would crash game
+    -- UI 4 Sim is better which I'll show later (UI 4 Sim allows you create custom UI for map which is synced)
+    OC.DisplayText("Global\nWarning", 12, 'ffffffff', 'center', 1)
+
+    -- moving camera to other position for 2,5 seconds
+    OC.MoveTo("Cam3", 2.5)
+    WaitSeconds(2.5)
+
+    -- creating vision at enemy base just to show how dangerous it is
+    -- it will be hidden after NIS mode ends leaving no icons ('true' flag)
+    OC.VisionAtLocation("MainBase_M", 60, Brains.Player1):DestroyOnExit(true)
+
+    -- and so on...
+    OC.MoveTo("BaseCam1", 3)
+    OC.MoveTo("BaseCam2", 1)
+    OC.MoveTo("Cam3", 4)
+
+end, {"BattleField1", "BattleField2"})
+
+                `}
+              </LuaCodeBlock>
             </div>
           </Expandable>
           <Expandable>
-            <Title>Oxygen</Title>
+            <Title>test</Title>
             <div className="expandable-content">
               <LuaCodeBlock>{`
                 if a == 1 then
