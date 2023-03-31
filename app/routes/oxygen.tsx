@@ -17,10 +17,18 @@ export default function Index() {
         <div className="expandable-container">
           <Expandable>
             <Title>Platoon Builder</Title>
-            <div className="expandable-content" style={{
-              margin:"1px 2px",
-            }}>
-              <LuaCodeBlock>
+            <div
+              className="expandable-content"
+              style={{
+                margin: "1px 2px",
+              }}
+            >
+              <LuaCodeBlock
+                wrapLongLines={true}
+                customStyle={{
+                  borderRadius: "5px",
+                }}
+              >
                 {`
 ...
 local pb = Oxygen.PlatoonBuilder()
