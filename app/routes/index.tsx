@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import { PixelImage } from "~/components/PixelImage";
 import { Expandable } from "~/components/Expandable";
+import { JSCodeBlock } from "~/components/JSCodeBlock";
 
 import indexStyles from "~/styles/index.css";
 import expandableStyles from "~/styles/Expandable.css";
@@ -93,6 +94,12 @@ export default function Index() {
                 officiis provident cupiditate dicta, molestiae dolor unde
                 placeat a ex exercitationem.
               </p>
+            </div>
+          </Expandable>
+          <Expandable>
+            <Title>Oxygen</Title>
+            <div className="expandable-content">
+              <JSCodeBlock>{"(num)=> num + 1"}</JSCodeBlock>
             </div>
           </Expandable>
         </div>
