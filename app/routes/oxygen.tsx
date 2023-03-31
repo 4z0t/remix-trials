@@ -139,15 +139,116 @@ baseManager:LoadPlatoons
             </div>
           </Expandable>
           <Expandable>
-            <Title>HotBuild Overhaul</Title>
+            <Title>Players Manager</Title>
             <div className="expandable-content">
-              <img src="/media/HotBuildOverhaul.png" width="100%"></img>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas
-                nam architecto quo molestias ipsa dolores commodi error expedita
-                officiis provident cupiditate dicta, molestiae dolor unde
-                placeat a ex exercitationem.
-              </p>
+              <LuaCodeBlock
+                wrapLongLines={true}
+                customStyle={{
+                  borderRadius: "5px",
+                }}
+              >
+                {`playersData = playersManager:Init
+ {
+    -- name of each upgrade is annotated, so, you dont need to 
+    -- learn each to set. But dont forget that not all upgrades may fit in the same slot.
+    -- Setting up upgrades for all players:
+    -- the returned value is data per player, it has as many entries as there are players in lobby
+  enhancements = {
+    Aeon = {
+        "AdvancedEngineering",
+        "T3Engineering",
+        "ResourceAllocation",
+        "ResourceAllocationAdvanced",
+        "EnhancedSensors"
+    },
+    Cybran = {
+        "AdvancedEngineering",
+        "T3Engineering",
+        "ResourceAllocation",
+        "MicrowaveLaserGenerator"
+    },
+    UEF = {
+        "AdvancedEngineering",
+        "T3Engineering",
+        "ResourceAllocation",
+        "Shield",
+        "ShieldGeneratorField"
+    },
+    Seraphim = {
+        "AdvancedEngineering",
+        "T3Engineering",
+        "DamageStabilization",
+        "DamageStabilizationAdvanced",
+        "ResourceAllocation",
+        "ResourceAllocationAdvanced"
+    }
+  },
+  {
+    -- we can set any color we want as it is done in UI
+    color = "ff18DAE0",
+    -- those are used to spawn player on map (those names must be defined on map
+    -- for each player)
+    units =
+    {
+        Aeon = 'AeonPlayer_1',
+        Cybran = 'CybranPlayer_1',
+        UEF = 'UEFPlayer_1',
+        Seraphim = 'SeraPlayer_1',
+    },
+    -- custom name for a player (if not set it will use its own from lobby)
+    name = "Punch lox"
+  },
+  {
+    color = "ff69D63E",
+    units =
+    {
+        Cybran = 'CybranPlayer_2',
+        UEF = 'UEFPlayer_2',
+        Aeon = 'AeonPlayer_2',
+        Seraphim = 'SeraPlayer_2',
+    },
+    name = "Zadsport",
+    -- we can set specific upgrades per player as well
+    enhancements = {
+        Aeon = {
+            "AdvancedEngineering",
+            "T3Engineering",
+            "ResourceAllocation",
+        },
+        Cybran = {
+            "AdvancedEngineering",
+            "T3Engineering",
+            "ResourceAllocation",
+        },
+        UEF = {
+            "AdvancedEngineering",
+            "T3Engineering",
+            "ResourceAllocation",
+        },
+        Seraphim = {
+            "AdvancedEngineering",
+            "T3Engineering",
+            "ResourceAllocation",
+        }
+  },
+  },
+ }
+
+-- we can get their count like this
+local playersCount = table.getsize(playersData)
+
+ ...
+-- After that we can spawn players' ACUs warping them ...
+playersManager:WarpIn(function()
+    ScenarioFramework.Dialogue(VOStrings.E01_D01_010, PlayerDeath, true)
+end)
+-- or gating in (this only changes effects ACUs spawn with, you will have to setup gate on map yourself)
+playersManager:GateIn(function()
+    ScenarioFramework.Dialogue(VOStrings.E01_D01_010, PlayerDeath, true)
+end)
+-- The function passed in is players' death callback.
+-- You can make mission end if player dies or keep count of dead players.`}
+              </LuaCodeBlock>
             </div>
           </Expandable>
 
