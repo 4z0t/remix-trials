@@ -24,7 +24,13 @@ main {
     display: grid;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1280px) {
+    .expandable-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 720px) {
     .expandable-container {
         grid-template-columns: 1fr;
     }
