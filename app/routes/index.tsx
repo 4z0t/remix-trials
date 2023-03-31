@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 import { PixelImage } from "~/components/PixelImage";
 import { Expandable } from "~/components/Expandable";
-import { JSCodeBlock } from "~/components/JSCodeBlock";
+import { LuaCodeBlock } from "~/components/LuaCodeBlock";
 
 import indexStyles from "~/styles/index.css";
 import expandableStyles from "~/styles/Expandable.css";
@@ -99,7 +99,11 @@ export default function Index() {
           <Expandable>
             <Title>Oxygen</Title>
             <div className="expandable-content">
-              <JSCodeBlock>{"(num)=> num + 1"}</JSCodeBlock>
+              <LuaCodeBlock >{`
+                if a == 1 then
+                  return
+                end
+              `}</LuaCodeBlock>
             </div>
           </Expandable>
         </div>
