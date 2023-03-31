@@ -1,4 +1,4 @@
-import { SyntaxHighlighterProps } from "react-syntax-highlighter";
+import type { SyntaxHighlighterProps } from "react-syntax-highlighter";
 
 export type PropsWithString<P = unknown> = P & {
   children: string | string[];

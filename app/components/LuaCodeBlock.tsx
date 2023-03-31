@@ -1,9 +1,8 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { SyntaxHighlighterProps } from "react-syntax-highlighter";
-import { darcula as style } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-import { SyntaxHighlighterCodeProps } from "~/utils";
+import type { SyntaxHighlighterCodeProps } from "~/utils";
 
 export function LuaCodeBlock(props: SyntaxHighlighterCodeProps) {
   return (
