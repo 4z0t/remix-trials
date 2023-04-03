@@ -99,7 +99,7 @@ export default function Index() {
           <Expandable>
             <Title>Oxygen</Title>
             <div className="expandable-content">
-              <LuaCodeBlock >{`
+              <LuaCodeBlock>{`
                 if a == 1 then
                   return
                 end

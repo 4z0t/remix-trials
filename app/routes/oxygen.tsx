@@ -255,7 +255,12 @@ end)
           <Expandable expandTime="1s">
             <Title>Cinematics</Title>
             <div className="expandable-content">
-              <LuaCodeBlock>
+              <LuaCodeBlock
+                wrapLongLines={true}
+                customStyle={{
+                  borderRadius: "5px",
+                }}
+              >
                 {`
 local OC = Oxygen.Cinematics
 ...

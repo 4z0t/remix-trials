@@ -4,5 +4,8 @@ export type PropsWithString<P = unknown> = P & {
   children: string | string[];
 };
 
-export type SyntaxHighlighterCodeProps = PropsWithString &
-  SyntaxHighlighterProps;
+//this shit doesnt work
+export type SyntaxHighlighterCodePropsWithSetLanguage = Omit<
+  SyntaxHighlighterProps,
+  "language"
+>;
