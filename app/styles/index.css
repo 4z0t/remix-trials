@@ -20,10 +20,12 @@ main {
 
 .expandable-container {
     justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
+    align-items: first baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
 }
-
+/* 
 @media only screen and (max-width: 1280px) {
     .expandable-container {
         grid-template-columns: 1fr 1fr;
@@ -34,4 +36,4 @@ main {
     .expandable-container {
         grid-template-columns: 1fr;
     }
-}
+} */
